@@ -18,9 +18,11 @@ public class GreatCircle {
         // Haversine Formula
         double xLat = Math.toRadians(xTwo - xOne);
         double yLon = Math.toRadians(yTwo - yOne);
-        double a = Math.pow(Math.sin(xLat / 2), 2) + Math.cos(Math.toRadians(xOne)) * Math
-                .cos(Math.toRadians(xTwo)) * Math.pow(Math.sin(yLon / 2), 2);
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+        double a = (Math.sin(xLat / 2.0) * Math.sin(xLat / 2.0))
+                + Math.cos(Math.toRadians(xOne)) * Math
+                .cos(Math.toRadians(xTwo)) * (Math.sin(yLon / 2.0) * Math.sin(yLon / 2.0));
+        double c = 2.0 * Math.asin(Math.sqrt(a));
         double distance = r * c;
 
         // Output distance

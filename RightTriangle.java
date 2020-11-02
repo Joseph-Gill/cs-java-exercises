@@ -11,7 +11,7 @@ public class RightTriangle {
         int b = Integer.parseInt(args[1]);
         int c = Integer.parseInt(args[2]);
 
-        //Output the boolean value of:
+        // Output the boolean value of:
         // 1) All integers are positive
         // 2) a^2 + b^2 = c^2
         System.out.println(
